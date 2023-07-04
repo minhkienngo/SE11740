@@ -335,37 +335,42 @@
                                 </div>
                             </div>
                         </div>
+                        <c:forEach items="${listP}" var="o">
+                            <div class="row">
 
+                                <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
 
-                        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
-                            <c:forEach items="${listP}" var="o"> 
-                                <div class="product-item bg-light mb-4">
-                                    <div class="product-img position-relative overflow-hidden">
-                                        <img class="img-fluid w-100" src="${o.ImagePath}" alt="">
-                                        <div class="product-action">
-                                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                    <div class="product-item bg-light mb-4">
+                                        
+                                        <div class="product-img position-relative overflow-hidden">
+                                            <img class="img-fluid w-100" src="${o.ImagePath}" alt="">
+                                            <div class="product-action">
+                                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="text-center py-4">
+                                            <a class="h6 text-decoration-none text-truncate" href="">${o.Title}</a>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <h5>${o.price}</h5>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="far fa-star text-primary mr-1"></small>
+                                                <small class="far fa-star text-primary mr-1"></small>
+                                                <small>${o.stock}</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="text-center py-4">
-                                        <a class="h6 text-decoration-none text-truncate" href="">${o.Title}</a>
-                                        <div class="d-flex align-items-center justify-content-center mt-2">
-                                            <h5>${o.price}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center mb-1">
-                                            <small class="fa fa-star text-primary mr-1"></small>
-                                            <small class="fa fa-star text-primary mr-1"></small>
-                                            <small class="fa fa-star text-primary mr-1"></small>
-                                            <small class="far fa-star text-primary mr-1"></small>
-                                            <small class="far fa-star text-primary mr-1"></small>
-                                            <small>${o.stock}</small>
-                                        </div>
-                                    </div>
+
                                 </div>
-                        </div>
-                        </c:forEach>
+
+                            </div>
+                        </c:forEach> 
                         <div class="col-12">
                             <nav>
                                 <ul class="pagination justify-content-center">
