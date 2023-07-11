@@ -40,7 +40,7 @@ public class EditProductController extends HttpServlet {
             product.setId(Integer.parseInt(request.getParameter("id")));
             product.setName(request.getParameter("name"));
             product.setImageUrl(request.getParameter("image"));
-            product.setPrice(request.getParameter("price"));
+            product.setPrice(Double.parseDouble(request.getParameter("price")));
             product.setTiltle(request.getParameter("title"));
             product.setDescription(request.getParameter("description"));
             product.setCategoryId(Integer.parseInt(request.getParameter("category")));

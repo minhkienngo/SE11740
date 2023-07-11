@@ -15,6 +15,7 @@
         <link rel="icon" href="img/Furni.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
             rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
@@ -30,6 +31,12 @@
         <%@include file="components/navBarComponent.jsp" %>
         <!-- Header-->
 
+<div class="banner">
+    <img src="img/Office.jpg" alt="Banner Image" style="width: 100%">
+</div>
+
+
+
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
@@ -42,6 +49,8 @@
                                         </c:forEach>
                         </ul>
                     </div>
+                    
+
                     <div class="col-md-9">
                         <h3>Danh sách sản phẩm</h3>
                         <c:choose>
@@ -106,6 +115,7 @@
                 </div>
             </div>
         </section>
+        <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
         <%@include file="components/footerComponent.jsp" %>
     </body>
 </html>

@@ -53,7 +53,7 @@
                         </table>
                         <h3>Tổng tiền: $${totalPrice}</h3> 
                 <div class="text-center mt-2">
-                    <a class="btn btn-outline-primary" href="home">Bấm tiếp tục để lên đơn</a>
+                    <a class="btn btn-outline-primary" href="home">Bấm để tiếp tục mua hàng</a>
                 </div>
             </div>
         </div>

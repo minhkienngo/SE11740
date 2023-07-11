@@ -43,7 +43,7 @@ public class OrderDetailDBcontext extends DBContext {
                 Cart cart = entry.getValue();
                 stm.setString(2, cart.getProduct().getName());
                 stm.setString(3, cart.getProduct().getImageUrl());
-                stm.setString(4, cart.getProduct().getPrice());
+                stm.setDouble(4, cart.getProduct().getPrice());
                 stm.setDouble(5, cart.getQuantity());
                 stm.executeUpdate();
             }
