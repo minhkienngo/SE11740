@@ -35,7 +35,7 @@
         } 
         %>
     </head>
-    <body>
+    <body style="background-image: url('img/log.jpg'); background-repeat: no-repeat;background-size: cover;  background-position: center;">
         <div id="logreg-forms">
             <!--  -->
             <c:if test="${check == null}">
@@ -60,7 +60,7 @@
                         
                         <button class="button2" type="button" id="btn-signup" onclick="doSignUp()">Sign Up</button>
                     </div>
-                    <button class="button3 btn-primary btn-block" type="button" onclick="doforgetPass()">Forgot Password</button>
+                    <!--<button class="button3 btn-primary btn-block" type="button" onclick="doforgetPass()">Forgot Password</button>-->
                 </form>
             </c:if>
             <c:if test="${check}">

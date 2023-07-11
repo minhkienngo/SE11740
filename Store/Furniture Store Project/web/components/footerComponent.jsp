@@ -1,15 +1,15 @@
-<footer class="footer_section">
+<footer class="footer_section" style="background-color: #F9ECEC;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 footer-col">
                         <div class="footer_contact">
-                            <h4>
+                            <h4 style="color: #0066ff">
                                 Reach at..
                             </h4>
                             <div class="contact_link_box">
                                 <a href="">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>
+                                    <span >
                                         
                                         kiennmhe171466@fpt.edu.vn
                                         <br>
@@ -37,7 +37,7 @@
                             <a href="index.html" class="footer-logo">
                                 Furni Store
                             </a>
-                            <p>
+                            <p style="color: #0066ff">
                                 Transform Your Space with Timeless Elegance                           
                                 
                                 
@@ -74,9 +74,9 @@
                 </div>
                 <div class="footer-info">
                     <div class="col-lg-7 mx-auto px-0">
-                        <p>
-                            &copy; <span id="displayYear"></span> All Rights Reserved By
-                            <a href="https://html.design/">Free Html Templates</a>
+                        <p style="color: #0066ff">
+                            &copy; <span id="displayYear"></span> Made by
+                            <a>Kien Ngo</a>
                         </p>
                     </div>
                 </div>

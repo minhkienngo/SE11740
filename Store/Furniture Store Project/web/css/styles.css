@@ -11385,7 +11385,7 @@ textarea.form-control-lg {
   box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 .footer_section {
-  background-color: black;
+    background-color: #ffd3d9;
   color: white;
   padding-top: 70px;
   text-align: center;
@@ -11415,7 +11415,7 @@ textarea.form-control-lg {
         }
 
         &:hover {
-          color: black;
+            color: #ffd3d9;
         }
       }
     }
@@ -11479,7 +11479,7 @@ textarea.form-control-lg {
     margin-top: 25px;
 
     p {
-      color: white;
+      color: #007bff;
       margin: 0;
       padding: 25px 0;
       border-top: 1px solid #efefef;

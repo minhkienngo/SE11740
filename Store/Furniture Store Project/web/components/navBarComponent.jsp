@@ -10,7 +10,7 @@
         window.location.href = "logout";
     }
 </script>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg " style="background-color: #F9ECEC; " >
     <div class="container px-4 px-lg-5">
 
         <a class="navbar-brand" href="home"><img class="img-fluid rounded-circle" 
@@ -37,7 +37,7 @@
                     </li>
 
                 </c:if>
-                <c:if test="${sessionScope.acc!= null}">
+                <c:if test="${sessionScope.role_admin != null}">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./ManagerOrder">Quản lý đơn hàng</a>
                     </li>
