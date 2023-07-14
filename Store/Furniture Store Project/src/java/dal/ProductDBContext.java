@@ -31,7 +31,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -57,7 +57,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -86,7 +86,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -127,7 +127,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -152,7 +152,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -181,7 +181,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));
@@ -216,7 +216,7 @@ public class ProductDBContext extends DBContext {
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, product.getName());
             stm.setString(2, product.getImageUrl());
-            stm.setDouble(3, product.getPrice());
+            stm.setString(3, product.getPrice());
             stm.setString(4, product.getTiltle());
             stm.setString(5, product.getDescription());
             stm.setInt(6, product.getCategoryId());
@@ -252,7 +252,7 @@ public class ProductDBContext extends DBContext {
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, p.getName());
             stm.setString(2, p.getImageUrl());
-            stm.setDouble(3, p.getPrice());
+            stm.setString(3, p.getPrice());
             stm.setString(4, p.getTiltle());
             stm.setString(5, p.getDescription());
             stm.setInt(6, p.getCategoryId());
@@ -276,7 +276,7 @@ public class ProductDBContext extends DBContext {
                 product.setId(rs.getInt(1));
                 product.setName(rs.getString(2));
                 product.setImageUrl(rs.getString(3));
-                product.setPrice(rs.getDouble(4));
+                product.setPrice(rs.getString(4));
                 product.setTiltle(rs.getString(5));
                 product.setDescription(rs.getString(6));
                 product.setCategoryId(rs.getInt(7));

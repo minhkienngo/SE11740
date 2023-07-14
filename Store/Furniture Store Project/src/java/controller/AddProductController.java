@@ -40,7 +40,7 @@ public class AddProductController extends HttpServlet {
             Product product = new Product();
             product.setName(request.getParameter("name"));
             product.setImageUrl(request.getParameter("image"));
-            product.setPrice(Double.parseDouble(request.getParameter("price")));
+            product.setPrice(request.getParameter("price"));
             product.setTiltle(request.getParameter("title"));
             product.setCategoryId(Integer.parseInt(request.getParameter("category")));
             product.setDescription(request.getParameter("description"));

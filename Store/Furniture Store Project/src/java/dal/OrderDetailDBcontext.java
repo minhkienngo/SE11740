@@ -43,7 +43,7 @@ public class OrderDetailDBcontext extends DBContext {
                 Cart cart = entry.getValue();
                 stm.setString(2, cart.getProduct().getName());
                 stm.setString(3, cart.getProduct().getImageUrl());
-                stm.setDouble(4, cart.getProduct().getPrice());
+                stm.setString(4, cart.getProduct().getPrice());
                 stm.setDouble(5, cart.getQuantity());
                 stm.executeUpdate();
             }
@@ -52,6 +52,7 @@ public class OrderDetailDBcontext extends DBContext {
             Logger.getLogger(OrderDetailDBcontext.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
 
     public List<OrderDetail> getAllOrderDetailById(int id) {
         List<OrderDetail> OrderDetails = new ArrayList<>();
@@ -92,6 +93,9 @@ public class OrderDetailDBcontext extends DBContext {
     }
     public static void main(String[] args) {
         OrderDetailDBcontext a = new OrderDetailDBcontext();
-        a.delete(19);
+        List<OrderDetail> list = a.getAllOrderDetailById(2);
+        for (OrderDetail o : list) {
+            System.out.println(o.getId());
+        }
     }
 }

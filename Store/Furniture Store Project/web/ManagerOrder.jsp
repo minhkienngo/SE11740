@@ -65,6 +65,7 @@
                             <th>Ngày tạo</th>
                             <th>Lưu ý</th>
                             <th>Tình trạng</th>
+                            <th>Xóa </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -78,11 +79,28 @@
                                 <td>${p.note}</td>
                                 <td>${p.status== true?'Đã giao':'Chưa giao'}</td>
                                 <td>
-                                    <c:if test="${!p.status}">
-                                        <a href="EditOrderManager?pid=${p.id}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Xong">&#xf23a;</i></a>
-                                    </c:if>
+                                    <a  onclick="cfDelete(${p.id})" class="btn btn-danger">Delete</a>
                                 </td>
+                                <c:if test="${!p.status}"> 
+                                    <td>
+
+                                        <a href="EditOrderManager?pid=${p.id}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Xong">&#xf23a;</i></a>
+
+                                    </td> 
+                                </c:if>
+
                             </tr>
+                            <c:forEach items="${p.details}" var="detail" varStatus="index">
+                                <tr>
+                                    <td>
+                                        ${detail.productName}
+                                    </td>
+                                    <td>
+                                        ${detail.quantity}
+                                    </td>
+                                </tr>
+                            </c:forEach>
+
                         </c:forEach>
                     </tbody>
                 </table>
@@ -139,7 +157,14 @@
                 </div>
             </div>
         </div>
+        <script>
+            function cfDelete(x) {
+                if (confirm("Are you sure to delete this order?")) {
+                    window.location = "DeleteManager?oid=" + x;
+                }
+            }
 
+        </script>
 
 
 

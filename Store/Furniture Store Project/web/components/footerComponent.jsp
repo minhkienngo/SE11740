@@ -8,7 +8,7 @@
                             </h4>
                             <div class="contact_link_box">
                                 <a href="">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <i class=" fa fa-envelope" aria-hidden="true"></i>
                                     <span >
                                         
                                         kiennmhe171466@fpt.edu.vn
@@ -23,7 +23,7 @@
                                     </span>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <span>
                                         Ha Noi
                                         <br>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-4 footer-col">
                         <div class="footer_detail">
-                            <a href="index.html" class="footer-logo">
+                            <a href="home" class="footer-logo">
                                 Furni Store
                             </a>
                             <p style="color: #0066ff">

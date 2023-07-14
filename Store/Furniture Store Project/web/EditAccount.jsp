@@ -50,17 +50,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Vai trò</label>
-                                    <select class="form-control" name="issell" disabled>
+                                    <select class="form-control" name="issell" >
                                         <option value="0"
                                                 <c:if test="${account.isSell == 0}">
                                                     selected
                                                 </c:if>
-                                                >Người bán</option>
+                                                >Guest</option>
                                          <option value="1"
                                                 <c:if test="${account.isSell == 1}">
                                                     selected
                                                 </c:if>
-                                                >Quản trị viên</option>
+                                                >Admin</option>
                                     </select>
                                     <input value="${account.isSell}" name="issell" type="text" hidden>
                                 </div>

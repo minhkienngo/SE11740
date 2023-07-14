@@ -32,6 +32,10 @@
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>controller.NewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteManager</servlet-name>
+        <servlet-class>controller.manager.DeleteManager</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteManager</servlet-name>
+        <url-pattern>/DeleteManager</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

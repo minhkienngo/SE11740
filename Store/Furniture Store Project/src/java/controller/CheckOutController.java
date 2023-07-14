@@ -95,7 +95,7 @@ public class CheckOutController extends HttpServlet {
         }
 
         Account a = (Account) request.getSession().getAttribute("acc");
-        Order order = new Order(a, totalPrice, note, new Shipping(shippingId));
+        Order order = new Order(0, a, totalPrice, note, "", new Shipping(shippingId), false);
 
         int orderId = new OrderDBcontext().createReturnId(order);
         //Lưu OrderDetail

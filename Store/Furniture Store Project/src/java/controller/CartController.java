@@ -49,7 +49,7 @@ public class CartController extends BaseRequiredAuthenController {
                 Integer productId = entry.getKey();
                 Cart cart = entry.getValue();
 
-                totalMoney += cart.getQuantity() * cart.getProduct().getPrice();
+                totalMoney += cart.getQuantity() * Double.parseDouble(cart.getProduct().getPrice());
 
             }
             request.setAttribute("totalMoney", totalMoney);

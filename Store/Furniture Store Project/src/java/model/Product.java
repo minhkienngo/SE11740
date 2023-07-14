@@ -10,7 +10,7 @@ public class Product {
    int id;
      String name;
      String imageUrl;
-     double price;
+     String price;
      String tiltle;
      String description;
      int sell_ID;
@@ -42,11 +42,11 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

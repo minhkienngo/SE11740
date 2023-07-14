@@ -5,6 +5,10 @@
  */
 package model;
 
+import dal.OrderDBcontext;
+import dal.OrderDetailDBcontext;
+import java.util.List;
+
 public class Order {
 
     private int id;
@@ -14,24 +18,25 @@ public class Order {
     private String createdDate;
     private Shipping shipping;
     private boolean status;
+    private List<OrderDetail> details;
+    private int numOfProduct;
 
     public Order() {
     }
 
-    public Order(Account account, double totalPrice, String note, Shipping shipping) {
-        this.account = account;
-        this.totalPrice = totalPrice;
-        this.note = note;
-        this.shipping = shipping;
-    }
 
-    public Order(Account account, double totalPrice, String note, String createdDate, Shipping shippingId) {
+    public Order(int id, Account account, double totalPrice, String note, String createdDate, Shipping shippingId, boolean status) {
+        this.id = id;
         this.account = account;
         this.totalPrice = totalPrice;
         this.note = note;
         this.createdDate = createdDate;
         this.shipping = shippingId;
+        this.status = status;
+        this.details = new OrderDetailDBcontext().getAllOrderDetailById(this.id); //constructor ko có id????
+        this.numOfProduct = this.details.size();
     }
+    
 
     public boolean isStatus() {
         return status;
@@ -88,5 +93,22 @@ public class Order {
     public void setShipping(Shipping shipping) {
         this.shipping = shipping;
     }
+
+    public List<OrderDetail> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<OrderDetail> details) {
+        this.details = details;
+    }
+
+    public int getNumOfProduct() {
+        return numOfProduct;
+    }
+
+    public void setNumOfProduct(int numOfProduct) {
+        this.numOfProduct = numOfProduct;
+    }
+    
 
 }

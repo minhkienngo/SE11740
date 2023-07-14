@@ -67,15 +67,15 @@ public class OrderDBcontext extends DBContext {
             PreparedStatement stm = connection.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                Order order = new Order();
-                order.setId(rs.getInt("id"));
-                order.setAccount(new AcountDBContext().getAccountById(rs.getInt("account_id")));
-                order.setTotalPrice(rs.getDouble("totalPrice"));
-                order.setNote(rs.getString("note"));
-                order.setCreatedDate(rs.getString("create_date"));
-                order.setShipping(new ShippingDBcontext().get(rs.getInt("id")));
-                order.setStatus(rs.getBoolean("status"));
-
+                Order order = new Order(
+                        rs.getInt("id"),
+                        new AcountDBContext().getAccountById(rs.getInt("account_id")),
+                        rs.getDouble("totalPrice"),
+                        rs.getString("note"),
+                        rs.getString("create_date"),
+                        new ShippingDBcontext().get(rs.getInt("id")),
+                        rs.getBoolean("status")
+                );
                 Orders.add(order);
             }
         } catch (Exception ex) {
@@ -99,7 +99,28 @@ public class OrderDBcontext extends DBContext {
         } catch (Exception ex) {
             System.out.println("Loi o updateActive " + ex.getMessage());
         }
-
     }
 
+    public void deleteOrder(String id) {
+
+        try {
+            String sql = "  delete [OrderDetail] where [order_id] = ? "
+                    + " Delete [Orders]  WHERE id = ?";
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, id);
+            stm.setString(2, id);
+            stm.executeUpdate();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Order> list = new OrderDBcontext().getAllOrder();
+        for (Order o : list) {
+            System.out.println(o.getDetails());
+        }
+    }
+  
 }
