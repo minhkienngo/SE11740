@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="css/login.css">
-        <title>Login</title>
+        <title>Forgot Password</title>
         <script>
             function doforgetPass() {
                 window.location.href = "forgetPassword";
@@ -33,14 +33,15 @@
         if (request.getSession().getAttribute("acc") != null) {
             response.sendRedirect("home");
         } 
+        String status = (String) request.getAttribute("status");
         %>
     </head>
     <body style="background-image: url('img/log.jpg'); background-repeat: no-repeat;background-size: cover;  background-position: center;">
         <div id="logreg-forms">
             <!--  -->
             <c:if test="${check == null}">
-                <form class="form-signin" action="login" method="post"> 
-                    <p id="heading">Login</p>
+                <form class="form-signin" action="ForgotPassword" method="post"> 
+                    <p id="heading">Forgot Password</p>
                     <div class="d-block mx-4 mb-3 mb-lg-4  text-danger"><b>${mess}</b></div>
                     <div class="field">
                         <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -48,50 +49,12 @@
                         </svg>
                         <input value="${user}" autocomplete="off" placeholder="Username" class="input-field" type="text" required="" autofocus="" name="Username">
                     </div>
-                    <div class="field">
-                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
-                        </svg>
-
-                        <input value="${pass}" placeholder="Password" class="input-field" type="password" required="" name="Password">
-                    </div>
-                    <div>
-                        <a href="ForgotPassword.jsp">Forgot Password ?</a>
-                    </div>
                     <div class="btn">
-                        <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                        
-                        <button class="button2" type="button" id="btn-signup" onclick="doSignUp()">Sign Up</button>
+                        <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                     </div>
                     <!--<button class="button3 btn-primary btn-block" type="button" onclick="doforgetPass()">Forgot Password</button>-->
                 </form>
             </c:if>
-            <c:if test="${check}">
-                <div class="login-box">
-                    <h3 id="heading">Register</h3>
-                    <form action="signup" method="post">
-                        <div class="d-block mx-4 mb-3 mb-lg-4  text-danger"><b>${messExit}</b></div>
-                        <div class="user-box">
-                            <input id="user-email" required autofocus="" value="${user}" name="user" type="text">
-                            <label>Username</label>
-                        </div>
-                        
-                        <div class="user-box">
-                            <input type="password" id="user-pass" required value="${pass}" autofocus="" name="pass" >
-                            <label>Password</label>
-                        </div>
-                        <div class="d-block mx-4 mb-3 mb-lg-4  text-danger"><b>${messPass}</b></div>
-                        <div class="user-box">
-                            <input type="password" id="user-repeatpass" required value="${repass}" autofocus="" name="repass">
-                            <label>Repeat Password</label>
-                        </div>
-                        <center> 
-                            <button class="btn a-vip" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                        </center>
-                    </form>
-                    <a href="login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-                </div>
-            </c:if> 
 
         </div>
 
