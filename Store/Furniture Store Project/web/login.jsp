@@ -55,9 +55,6 @@
 
                         <input value="${pass}" placeholder="Password" class="input-field" type="password" required="" name="Password">
                     </div>
-                    <div>
-                        <a href="ForgotPassword.jsp">Forgot Password ?</a>
-                    </div>
                     <div class="btn">
                         <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         
